@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Hello World!</h1>
+      <p id="currentTime"></p>
+      <script src="script.js"></script>
+  </body>
+</html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subham Housing Hostel - Premium Hostel for School Students</title>
+    <meta name="description" content="Subham Housing Hostel provides premium accommodation for school students with 24/7 electricity, comfortable beds, nutritious food, and teaching support in Dhenkanal, Odisha.">
+    <meta name="keywords" content="hostel, school students, Dhenkanal, Odisha, student accommodation, boarding, education">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#0ea5e9",
+                        accent: "#f59e0b",
+                        dark: "#1e293b",
+                        light: "#f8fafc"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'heading': ['Poppins', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%);
+        }
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-light">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                        <i class="fas fa-home text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-heading font-bold text-primary">Subham Housing Hostel</h1>
+                        <p class="text-xs text-gray-600">For School Students</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link font-medium text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link font-medium text-gray-700 hover:text-primary transition-colors">About Us</a>
+                    <a href="#facilities" class="nav-link font-medium text-gray-700 hover:text-primary transition-colors">Facilities</a>
+                    <a href="#contact" class="nav-link font-medium text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </nav>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link font-medium text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link font-medium text-gray-700 hover:text-primary transition-colors">About Us</a>
+                    <a href="#facilities" class="nav-link font-medium text-gray-700 hover:text-primary transition-colors">Facilities</a>
+                    <a href="#contact" class="nav-link font-medium text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="max-w-4xl mx-auto text-center animate-fade-in">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6 animate-slide-up">
+                    A Home Away From Home for Your Child
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Premium hostel accommodation for school students with complete care, education, and growth support
+                </p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="#contact" class="bg-accent hover:bg-yellow-500 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Now
+                    </a>
+                    <a href="#facilities" class="bg-white hover:bg-gray-100 text-primary font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105">
+                        <i class="fas fa-star mr-2"></i> View Facilities
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-4">About Subham Housing Hostel</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We provide a safe, nurturing, and educational environment for school students to grow academically and personally.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <h3 class="text-2xl font-heading font-semibold text-primary mb-6">Our Mission & Vision</h3>
+                    <p class="text-gray-700 mb-4">
+                        At Subham Housing Hostel, we believe that a child's environment plays a crucial role in their overall development. Our mission is to create a home-like atmosphere where students can focus on their studies while developing essential life skills.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Located in the peaceful area of Unkarantipur, Palamandap District, Dhenkanal, Odisha, we offer a perfect blend of modern amenities and traditional values to ensure holistic growth.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Safe & Secure Environment</h4>
+                                <p class="text-gray-600">24/7 security and supervision for complete peace of mind</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Academic Excellence</h4>
+                                <p class="text-gray-600">Dedicated teachers and study support for better performance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gray-100 rounded-xl p-2 shadow-lg">
+                        <img 
+                            src="https://picsum.photos/600/400?random=10" 
+                            alt="Subham Housing Hostel building exterior" 
+                            class="w-full h-auto rounded-lg"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl max-w-xs">
+                        <div class="text-3xl font-bold">15+</div>
+                        <div class="text-lg">Years of Experience</div>
+                        <div class="text-sm opacity-90">In student care & accommodation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-4">Our Premium Facilities</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We provide everything your child needs for comfortable living and academic success
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Facility 1 -->
+                <div class="facility-card bg-white rounded-xl p-6 shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-dark mb-3">24/7 Electricity</h3>
+                    <p class="text-gray-600 mb-4">
+                        Uninterrupted power supply with backup generators to ensure continuous study hours and comfortable living.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>Always Available</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Facility 2 -->
+                <div class="facility-card bg-white rounded-xl p-6 shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-bed text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-dark mb-3">Comfortable Beds</h3>
+                    <p class="text-gray-600 mb-4">
+                        High-quality, orthopedic mattresses and bedding for restful sleep and proper physical development.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>Quality Sleep</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Facility 3 -->
+                <div class="facility-card bg-white rounded-xl p-6 shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-dark mb-3">Friendly Environment</h3>
+                    <p class="text-gray-600 mb-4">
+                        Warm, welcoming atmosphere with caring staff and positive peer group for emotional well-being.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>Positive Vibes</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Facility 4 -->
+                <div class="facility-card bg-white rounded-xl p-6 shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-dark mb-3">Proper Nutrition</h3>
+                    <p class="text-gray-600 mb-4">
+                        Balanced, hygienic meals prepared by experienced cooks to support physical and mental growth.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>Healthy Growth</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Facility 5 -->
+                <div class="facility-card bg-white rounded-xl p-6 shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-chalkboard-teacher text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-dark mb-3">Teaching Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        Qualified teachers for regular study sessions, homework help, and exam preparation guidance.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>Academic Excellence</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Facility 6 -->
+                <div class="facility-card bg-white rounded-xl p-6 shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold text-dark mb-3">Holistic Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Extracurricular activities, sports, and moral education for overall personality development.
+                    </p>
+                    <div class="flex items-center text-primary font-medium">
+                        <span>All-Round Growth</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-4">What Parents Say</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img 
+                                src="https://picsum.photos/100?random=20" 
+                                alt="Parent testimonial" 
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Mr. Rajesh Patnaik</h4>
+                            <p class="text-gray-600 text-sm">Parent of Class 10 Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "My son's academic performance improved significantly after joining Subham Hostel. The teaching support and disciplined environment made all the difference."
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img 
+                                src="https://picsum.photos/100?random=21" 
+                                alt="Parent testimonial" 
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Mrs. Priyanka Das</h4>
+                            <p class="text-gray-600 text-sm">Parent of Class 8 Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "The nutritious food and caring staff at Subham Hostel give me peace of mind. My daughter is not just studying, she's thriving in all aspects."
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img 
+                                src="https://picsum.photos/100?random=22" 
+                                alt="Parent testimonial" 
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Mr. Amit Kumar</h4>
+                            <p class="text-gray-600 text-sm">Parent of Class 9 Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "24/7 electricity means my son can study anytime. The comfortable beds ensure he gets proper rest. Highly recommended for serious students."
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Contact Us</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                    Get in touch to schedule a visit or learn more about admission procedures
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-heading font-semibold mb-6">Visit Our Hostel</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Location</h4>
+                                <p class="opacity-90">Unkarantipur, Palamandap District</p>
+                                <p class="opacity-90">Dhenkanal, Odisha - 759001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Contact Number</h4>
+                                <p class="text-xl font-bold">+91 72056 43325</p>
+                                <p class="opacity-90 mt-1">Available 8:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Visiting Hours</h4>
+                                <p class="opacity-90">Monday to Saturday: 10:00 AM - 5:00 PM</p>
+                                <p class="opacity-90">Sunday: 11:00 AM - 3:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="text-xl font-heading font-semibold mb-4">Why Choose Us?</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-accent mr-3"></i>
+                                <span>Proven track record of academic improvement</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-accent mr-3"></i>
+                                <span>Safe and secure premises with CCTV surveillance</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-accent mr-3"></i>
+                                <span>Regular parent-teacher meetings and updates</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-accent mr-3"></i>
+                                <span>Medical facilities and emergency care available</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-gray-800">
+                    <h3 class="text-2xl font-heading font-semibold text-dark mb-6">Send Inquiry</h3>
+                    <form id="inquiry-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Parent's Name *</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="student" class="block text-gray-700 font-medium mb-2">Student's Class *</label>
+                            <select id="student" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select Class</option>
+                                <option value="6">Class 6</option>
+                                <option value="7">Class 7</option>
+                                <option value="8">Class 8</option>
+                                <option value="9">Class 9</option>
+                                <option value="10">Class 10</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Any specific requirements or questions..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-[1.02]">
+                            <i class="fas fa-paper-plane mr-2"></i> Send Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                            <i class="fas fa-home text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-heading font-bold">Subham Housing Hostel</h3>
+                            <p class="text-xs text-gray-400">For School Students</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">
+                        Providing premium hostel accommodation with complete care, education, and growth support for school students since 2008.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-heading font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#facilities" class="text-gray-400 hover:text-white transition-colors">Facilities</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-heading font-semibold mb-6">Facilities</h4>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400">24/7 Electricity</li>
+                        <li class="text-gray-400">Comfortable Beds</li>
+                        <li class="text-gray-400">Nutritious Food</li>
+                        <li class="text-gray-400">Teaching Support</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-heading font-semibold mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Unkarantipur, Palamandap District, Dhenkanal, Odisha</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">+91 72056 43325</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <span class="text-gray-400">info@subhamhostel.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Subham Housing Hostel. All rights reserved. | Designed for the holistic development of school students</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Define data at the beginning
+        const hostelInfo = {
+            "name": "Subham Housing Hostel",
+            "address": "Unkarantipur, Palamandap District, Dhenkanal, Odisha",
+            "phone": "+917205643325",
+            "email": "info@subhamhostel.com",
+            "established": "2008"
+        };
+        
+        const facilities = [
+            { "id": 1, "title": "24/7 Electricity", "icon": "bolt", "description": "Uninterrupted power supply" },
+            { "id": 2, "title": "Comfortable Beds", "icon": "bed", "description": "Orthopedic mattresses" },
+            { "id": 3, "title": "Friendly Environment", "icon": "users", "description": "Positive peer group" },
+            { "id": 4, "title": "Proper Nutrition", "icon": "utensils", "description": "Balanced meals" },
+            { "id": 5, "title": "Teaching Support", "icon": "chalkboard-teacher", "description": "Qualified teachers" },
+            { "id": 6, "title": "Holistic Development", "icon": "heart", "description": "Extracurricular activities" }
+        ];
+        
+        // DOM Elements
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const backToTopButton = document.getElementById('back-to-top');
+        const inquiryForm = document.getElementById('inquiry-form');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Mobile Menu Toggle
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.className = 'fas fa-bars text-xl';
+            } else {
+                icon.className = 'fas fa-times text-xl';
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').className = 'fas fa-bars text-xl';
+            });
+        });
+        
+        // Back to Top Button
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0');
+                backToTopButton.classList.add('opacity-100');
+            } else {
+                backToTopButton.classList.remove('opacity-100');
+                backToTopButton.classList.add('opacity-0');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Form Submission
+        inquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const studentClass = document.getElementById('student').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, you would send this data to a server
+            // For demo purposes, we'll show an alert
+            alert(`Thank you ${name}! Your inquiry has been submitted. We will contact you at ${phone} shortly.`);
+            
+            // Reset form
+            inquiryForm.reset();
+            
+            // Scroll to top of form
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Initialize animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.facility-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
